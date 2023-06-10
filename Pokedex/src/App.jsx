@@ -3,6 +3,7 @@ import "./App.scss";
 import PokemonsContainer from "./components/PokemonsContainer";
 import TypesBar from "./components/TypesBar";
 import PokemonModalProvider from "./context/PokemonModalProvider";
+import Modal from "./components/modal/Modal";
 
 function App() {
   const [type, setType] = useState("ice");
@@ -14,6 +15,7 @@ function App() {
           <TypesBar setType={setType} />
           <PokemonsContainer type={type} />
         </div>
+        <Modal />
       </PokemonModalProvider>
     </>
   );
